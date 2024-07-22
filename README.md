@@ -14,21 +14,21 @@
 
 -   Install necessary packages
 
-        docker-compose exec -it todoapp_app_1 composer install
+        docker-compose exec app composer install
 
 
 -   Generate Laravel app key
 
-        docker-compose exec -it todoapp_app_1 /var/www/html/artisan key:generate
+        docker-compose exec app /var/www/html/artisan key:generate
 
 -   Run migrations
 
-        docker-compose exec -it todoapp_app_1 php artisan migrate --seed
+        docker-compose exec app php artisan migrate --seed
 
 
 -   Fetch the to-do list
 
-        docker-compose exec -it todoapp_app_1 php artisan fetch:tasks
+        docker-compose exec app php artisan fetch:tasks
 
 
 ## Usage
